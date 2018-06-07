@@ -5,7 +5,10 @@
   "main": "app.js",
   "dependencies": {
     "koa": "^2.5.1",
-    "koa-sslify": "^2.1.2"
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-sslify": "^2.1.2",
+    "monk": "^6.0.6"
   },
   "devDependencies": {},
   "scripts": {
