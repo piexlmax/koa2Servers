@@ -5,14 +5,14 @@ const user = db.get('user');//表
 
  const regist_fn = async (ctx,next)=>{
      let query = ctx.request.body
-     console.log(await students.findOne({userId:query.userId}))
+     console.log(await user.findOne({userId:query.userId}))
      if(await user.findOne({userId:query.userId})){
         ctx.body = {
             code:0,
             err_msg:"已注册或正在审核"
         }
     }else{
-        await students.insert(query)
+        await user.insert(query)
         ctx.body = {
             code:1,
             err_msg:"注册成功"
